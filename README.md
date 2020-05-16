@@ -2,6 +2,7 @@
 I would recommend you go through at least the [About][8] subtopics below but if you just want the dataset and the program, head to [Usage][7].
 ## Usage
 1. Download the repo by clicking the green "Clone or download" button and click download as ZIP.
+2. Extract the files.
 2. Open "courses.csv" in Excel, Google Docs or something similar.
 3. To help in readability, expand the size of the title and description column and enable wrap text on the columns (In Excel, right-click on the column, click on Format Cells, go to Alignment and enable Wrap text. If the row height is wrong, click on Format in the Home tab on the ribbon and click AutoFit Row Height).
 4. Go over the courses (about 135 much better than 300 on course explorer) and see which ones you want to study or not. Mark the ones you don't want to study with either "n" or "no" under the "Consider" (last) column and the ones you do want to study with "y" or "yes" and save it in the same folder as this program. You can set blanks in the "Consider" column to be considered as yes or no in the program.
