@@ -4,8 +4,8 @@ I would recommend you go through atleast the [About][8] subtopics below but if y
 1. Download the repo by clicking the green "Clone or download" button and click download as ZIP.
 2. Open "courses.csv" in Excel, Google Docs or something similar.
 3. To help in readability, expand the size of the title and description column and enable wrap text on the columns (In Excel, right click on the column, click on Format Cells, go to Alignment and enable Wrap text. If the row height is wrong, click on format in the home tab on the ribbon and click AutoFit Row Height).
-4. Go over the courses (about 135 much better than 300 on course explorer) and see which ones you want to study or not. Mark the ones you don't want to study with either "n" or "no" under the "Consider" (last) column and the ones you do want to study  with anything else other than blank and save it in the same folder as the this program. You can leave the ones you don't want to skip blank and enter "y" to "Consider blanks?" in the program. 
-5. Run combinations.exe. The program will skip all the courses with "no" and also blanks if you didn't enter "y" for "Consider blanks?", and makes combinations of 2 for the rest of the courses. 
+4. Go over the courses (about 135 much better than 300 on course explorer) and see which ones you want to study or not. Mark the ones you don't want to study with either "n" or "no" under the "Consider" (last) column and the ones you do want to study with "y" or "yes" and save it in the same folder as the this program. You can set blanks in the "Consider" column to be considered as yes or no in the program.
+5. Run combinations.exe. The program will skip all the courses with "no" and blanks if you enter "n" for "Consider blanks as yes or no?", and makes combinations of 2 for the rest of the courses.
 6. It will show you all the possible combinations and after that you can enter the course you want to study the most and it will give you the courses that don't overlap with the requirements of the course you entered. You can then look through those courses and find the combination that works for you the best.
 7. If you want to reduce the number of combinations, enter "y" on "Restrict humanities and social science?"
 ### Making Combinations
@@ -28,6 +28,10 @@ The second part of this small project is combinations.exe, which goes through th
 scraping.py scrapes (ofc) the general requirements courses of fall 2020 from the [UIUC course explorer][1]. If you want to scrape the course explorer yourself, feel free to use my code or change it to your requirements. Note that I used selenium instead of requests as the course explorer generates the page of each course through Javascript and isn't loaded when requests gets the webpagew while selenium waits for the whole page to load. 
 To run scraper.py, you need to install the requirements present in the requirements.txt through pip using:
 ```pip install -r requirements.txt ``` and the opera driver for selenium [here][4] under the Browsers section. Opera because that's my current browser but feel free to download another. The only piece of code to change should be the line 35 of scraper.py where the driver is launched.
+### Combinations
+The program runs a quite brute force method to get the combinations and for a dataset of this size, computation time is pretty small so it's not really necessary to optimize it. 
+
+Sorry for the bad code, this was just a personal tool that I decided to share and I have other projects to work on so I'll be leaving this as it is.
 
 [1]: https://courses.illinois.edu/gened/DEFAULT/DEFAULT
 [2]: https://raw.githubusercontent.com/wadefagen/datasets/master/gpa/uiuc-gpa-dataset.csv
