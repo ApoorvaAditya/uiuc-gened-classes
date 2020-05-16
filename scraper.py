@@ -25,7 +25,7 @@ def getGPA(row):
 
 
 classes = []
-runMain = False
+runMain = True
 
 baseLink = "https://courses.illinois.edu/schedule/2020/fall/"
 mainlinks = ["https://courses.illinois.edu/gened/2020/fall/HUM", "https://courses.illinois.edu/gened/2020/fall/SBS", "https://courses.illinois.edu/gened/2020/fall/CS", "https://courses.illinois.edu/gened/2020/fall/ACP"]
@@ -33,7 +33,7 @@ gpaLink = "http://waf.cs.illinois.edu/discovery/grade_disparity_between_sections
 
 if runMain:
     with Opera() as browser:
-        with open('classes.csv', 'w') as csvFile:
+        with open('coursestemp.csv', 'w') as csvFile:
             fieldnames = ['Course', 'Title', 'Description', 'Credits', 'ACP', 'CS', 'HUM', 'NAT', 'QR', 'SBS']
             writer = csv.DictWriter(csvFile, fieldnames=fieldnames)
             writer.writeheader()
@@ -93,10 +93,10 @@ with open('uiuc-gpa-dataset.csv', 'r') as gpaFile:
     for course in courses:
         courses[course] /= counts[course]
 
-with open('classes.csv', 'r') as f1:
+with open('coursestemp.csv', 'r') as f1:
     reader = csv.DictReader(f1)
     fieldnames = ['Course', 'Title', 'Description', 'Credits', 'ACP', 'CS', 'HUM', 'NAT', 'QR', 'SBS', 'Average GPA', 'Best Instructor', 'Best Instructor GPA']
-    with open('classes2.csv', 'w') as f2:
+    with open('courses.csv', 'w') as f2:
         writer = csv.DictWriter(f2, fieldnames=fieldnames)
         writer.writeheader()
         for row in reader:
