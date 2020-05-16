@@ -17,7 +17,7 @@ The program makes the combinations of 2 courses in which the general requirement
 If "Restrict humanities and social science?" is enabled (i.e you enter "y"):
 * Consider any type of other requirements as overlap. So for example, if one course has Social and Behavioural Science requirement of whichever type and the other course also has Social and Behavioural Science requirement, then it will be an overlap.
 
-I added this because I thought that the best way to choose the gened class would be if there were no overlaps on the requirements between the 2 courses and your time is maximised since you're not wasting it on repeating a requirement but that isn't the case when you need atleast 2 courses to fully complete the humanities and social science requirements of 6 credit hours. You can use this option to reduce the number of combinations if you want but it really was just a mistake I left in.
+I added the last option (above) because I thought that the best way to choose the gened class would be if there were no overlaps on the requirements between the 2 courses and your time is maximised since you're not wasting it on repeating a requirement but that isn't the case when you need atleast 2 courses to fully complete the humanities and social science requirements of 6 credit hours. You can use this option to reduce the number of combinations if you want but it really was just a mistake I left in.
 
 ## About
 ### Dataset
