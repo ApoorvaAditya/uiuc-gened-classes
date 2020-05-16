@@ -1,4 +1,4 @@
-# Gened Classes Dataset
+# Gened Classes Dataset and Combinations
 I would recommend you go through atleast the [About][8] subtopics below but if you just want the dataset and the program, head to [Usage][7].
 ## About
 ### Dataset
