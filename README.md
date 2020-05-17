@@ -2,6 +2,7 @@
 I would recommend you go through at least the [About][8] subtopics below but if you just want the dataset and the program, head to [Usage][7].
 ## Usage
 1. Download the repo by clicking the green "Clone or download" button and click download as ZIP.
+2. Extract the files.
 2. Open "courses.csv" in Excel, Google Docs or something similar.
 3. To help in readability, expand the size of the title and description column and enable wrap text on the columns (In Excel, right-click on the column, click on Format Cells, go to Alignment and enable Wrap text. If the row height is wrong, click on Format in the Home tab on the ribbon and click AutoFit Row Height).
 4. Go over the courses (about 135 much better than 300 on course explorer) and see which ones you want to study or not. Mark the ones you don't want to study with either "n" or "no" under the "Consider" (last) column and the ones you do want to study with "y" or "yes" and save it in the same folder as this program. You can set blanks in the "Consider" column to be considered as yes or no in the program.
@@ -14,7 +15,10 @@ The program makes the combinations of 2 courses in which the general requirement
 * Consider same type of Cultural Studies requirement (i.e. US Minority, Western/Comparative Culture etc.) as overlap but not the presence of Cultural Studies as overlap. So for example, if one course and US and other WCC, it will not be an overlap but if one course is US and other is also US, then it is an overlap.
 
 If "Restrict humanities and social science?" is enabled (i.e you enter "y"):
-* Consider any type of other requirements as overlap. So for example, if one course has Social and Behavioural Science requirement of whichever type and the other course also has Social and Behavioural Science requirement, then it will be an overlap 
+* Consider any type of other requirements as overlap. So for example, if one course has Social and Behavioural Science requirement of whichever type and the other course also has Social and Behavioural Science requirement, then it will be an overlap.
+
+I added the last option (above) because I thought that the best way to choose the gened class would be if there were no overlaps on the requirements between the 2 courses and your time is maximised since you're not wasting it on repeating a requirement but that isn't the case when you need atleast 2 courses to fully complete the humanities and social science requirements of 6 credit hours. You can use this option to reduce the number of combinations if you want but it really was just a mistake I left in.
+
 ## About
 ### Dataset
 This repo contains the dataset scraped from the [UIUC course explorer][1]. It contains the general education courses for fall 2020, their name, description, credit hours, general education requirements, average GPA of fall 2019, the instructor with the highest GPA (denoted by best here, indicative of the best in terms of the GPA) of fall 2019, and the average GPA of the class of the same instructor. The last three columns of data have been extracted from [this dataset][2] provided [here][3]. The main objective is to combine the data from courses and GPA datasets for freshmen to help them decide on their general requirements courses and maximise their time and credits and help them find what they really want to learn. Instead of going through hundreds of courses and clicking on each of them to find out what the course is about and its description, this dataset brings it all to one place. The average GPA is included for those who are not interested in what they study but how easy it is to get good grades. The best instructor is included to let the students which instructor to look for in the course for the best understanding, assuming of course that GPA is indicative of a better teacher. If someone has a better heuristic to judge this, feel free to make a pull request. There were duplicates in the original dataset of that was actually scraped where the course name (e.g. AAS100) were different but the course title (e.g. Intro to Asian American Studies) was the same. Not really sure why they are there because most of these duplicates don't have descriptions but it might be that they are a part of the same courses or something like that. Since they don't have descriptions, I removed the duplicates and the edited file is "courses with atleast 2 gened reqs - no duplicates.csv" and "courses.csv" is just a copy of the same.  The dataset "courses with atleast 2 gened reqs - duplicates.csv" is the original one and contains duplicates. If you want to use that, rename it to "courses.csv" and it should work with the combinations program.
@@ -31,7 +35,7 @@ To run scraper.py, you need to install the requirements present in the requireme
 ### Combinations
 The program runs a quite brute force method to get the combinations and for a dataset of this size, computation time is pretty small so it's not really necessary to optimize it. 
 
-Sorry for the bad code, this was just a personal tool that I decided to share and I have other projects to work on so I'll be leaving this as it is.
+Sorry for the bad code, this was just a personal tool that I decided to share and I have other projects to work on so I'll be leaving the code as it is but if you want to change it and help improve this repo, make a pull request.
 
 [1]: https://courses.illinois.edu/gened/DEFAULT/DEFAULT
 [2]: https://raw.githubusercontent.com/wadefagen/datasets/master/gpa/uiuc-gpa-dataset.csv
