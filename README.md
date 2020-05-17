@@ -35,7 +35,7 @@ To run scraper.py, you need to install the requirements present in the requireme
 ### Combinations
 The program runs a quite brute force method to get the combinations and for a dataset of this size, computation time is pretty small so it's not really necessary to optimize it. 
 
-Sorry for the bad code, this was just a personal tool that I decided to share and I have other projects to work on so I'll be leaving this as it is.
+Sorry for the bad code, this was just a personal tool that I decided to share and I have other projects to work on so I'll be leaving the code as it is but if you want to change it and help improve this repo, make a pull request.
 
 [1]: https://courses.illinois.edu/gened/DEFAULT/DEFAULT
 [2]: https://raw.githubusercontent.com/wadefagen/datasets/master/gpa/uiuc-gpa-dataset.csv
