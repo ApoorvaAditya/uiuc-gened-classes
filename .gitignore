@@ -1,0 +1,8 @@
+venv/
+.vscode/
+databases/
+build/
+__pycache__/
+combinations.spec
+dist/
+Course Combinations.rar
